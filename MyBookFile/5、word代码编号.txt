@@ -1,0 +1,22 @@
+    Sub 给程序加编号()
+    '
+    ' 给程序加编号，这个宏用于给选定区域的程序加上编号。
+    ' 这个程序有几个特点：
+    ' (1)在定位行之前要先定位页，因为word的行号是以页为基础的。
+    ' (2)Information中只有开始字符所在行的信息，却没有结束行的信息（或者是我没有找到）。
+    ' 这个程序有一个缺陷，由于没找到获得所选区域总行数的方法。所以选择区域必须为一页，
+    '不能跨页选择，否则出错
+    '
+    startNum = InputBox("输入开始编号", "", "1")
+    pageNum = Selection.Information(wdActiveEndAdjustedPageNumber) '得到当前页号
+    startLine = Selection.Information(wdFirstCharacterLineNumber) '得到第一行的行号
+    Selection.EndKey Unit:=wdLine '相当于按一下end键
+    endLine = Selection.Information(wdFirstCharacterLineNumber) '得到按end键后的行号，即所选区域的结束行号
+    Selection.GoTo What:=wdGoToPage, Which:=wdGoToNext, Name:=pageNum '定位页（光标会自动停在页的第一行）
+    Selection.MoveDown Unit:=wdLine, Count:=startLine - 1 '下移数行，到达所选区域的第一行
+    For i = 0 To endLine - startLine
+    Selection.HomeKey Unit:=wdLine '相当于按钮Home键
+    Selection.TypeText Text:=Right("0" & (i + startNum), 2) & Chr(9)
+    Selection.MoveDown Unit:=wdLine, Count:=1 '下移一行
+    Next i
+    End Sub
