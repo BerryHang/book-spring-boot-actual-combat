@@ -23,6 +23,10 @@
         <module>book-spring-boot-actual-combat-jsp</module>
         <module>book-spring-boot-actual-combat-thymeleaf</module>
         <module>book-spring-boot-actual-combat-upload</module>
+        <module>book-spring-boot-actual-combat-listener</module>
+        <module>book-spring-boot-actual-combat-filter</module>
+        <module>book-spring-boot-actual-combat-interceptor</module>
+        <module>book-spring-boot-actual-combat-project-example</module>
     </modules>
 
     <properties>
