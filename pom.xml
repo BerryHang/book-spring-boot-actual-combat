@@ -22,6 +22,7 @@
         <module>book-spring-boot-actual-combat-jpa</module>
         <module>book-spring-boot-actual-combat-jsp</module>
         <module>book-spring-boot-actual-combat-thymeleaf</module>
+        <module>book-spring-boot-actual-combat-upload</module>
     </modules>
 
     <properties>
