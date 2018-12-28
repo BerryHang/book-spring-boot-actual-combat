@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "project.name",
+      "type": "java.lang.String",
+      "description": "项目名称."
+    },
+    {
+      "name": "author.name",
+      "type": "java.lang.String",
+      "description": "作者名称."
+    }
+  ]
+}
