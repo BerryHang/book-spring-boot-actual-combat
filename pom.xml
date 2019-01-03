@@ -21,6 +21,7 @@
     <modules>
 
         <module>book-spring-boot-actual-combat-basic</module>
+        <module>book-spring-boot-actual-combat-spring</module>
     </modules>
 
     <properties>
