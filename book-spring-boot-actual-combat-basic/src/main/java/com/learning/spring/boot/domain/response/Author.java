@@ -54,7 +54,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return "BasicConfig{" +
+        return "AuthorInfo{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", info='" + info + '\'' +
