@@ -22,6 +22,10 @@
 
         <module>book-spring-boot-actual-combat-basic</module>
         <module>book-spring-boot-actual-combat-spring</module>
+        <module>book-spring-boot-actual-combat-restful</module>
+        <module>book-spring-boot-actual-combat-lombok</module>
+        <module>book-spring-boot-actual-combat-jpa</module>
+        <module>book-spring-boot-actual-combat-validate</module>
     </modules>
 
     <properties>
