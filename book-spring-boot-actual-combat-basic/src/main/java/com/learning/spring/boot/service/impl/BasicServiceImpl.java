@@ -1,6 +1,6 @@
 package com.learning.spring.boot.service.impl;
 
-import com.learning.spring.boot.domain.response.Author;
+import com.learning.spring.boot.domain.response.User;
 import com.learning.spring.boot.service.BasicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import org.springframework.stereotype.Service;
 public class BasicServiceImpl implements BasicService {
 
     @Autowired
-    private Author author;
+    private User user;
 
     @Override
     public String getAuthorInfo() {
-        return author.toString();
+        return user.toString();
     }
 }
