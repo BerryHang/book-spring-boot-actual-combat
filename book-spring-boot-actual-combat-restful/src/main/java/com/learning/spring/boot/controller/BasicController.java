@@ -16,22 +16,18 @@ import javax.ws.rs.core.MediaType;
  * @Description: ${description}
  * @Date: 2018/12/28 15:28
  */
-@Path("/basic")
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
+@RestController
 public class BasicController {
 
     @Autowired
     private BasicService basicService;
 
-    @Path("/hello")
-    @GET
+    @GetMapping( produces = MediaType.APPLICATION_JSON)
     public String helloSpringBoot(){
         return "Hello Spring boot!";
     }
 
-    @GET
-    @Path("/info")
+    @GetMapping("info")
     public String basicInfo(){
         return basicService.getAuthorInfo();
     }
