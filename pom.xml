@@ -26,6 +26,7 @@
         <module>book-spring-boot-actual-combat-jpa</module>
         <module>book-spring-boot-actual-combat-validate</module>
         <module>book-spring-boot-actual-combat-project</module>
+        <module>book-spring-boot-actual-combat-test</module>
     </modules>
 
     <properties>

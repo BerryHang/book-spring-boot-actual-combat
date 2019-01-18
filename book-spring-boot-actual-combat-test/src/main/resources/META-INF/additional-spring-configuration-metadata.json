@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "project.name",
+      "type": "java.lang.String",
+      "description": "项目名称."
+    },
+    {
+      "name": "author.name",
+      "type": "java.lang.String",
+      "description": "作者名称."
+    },
+    {
+      "name": "author.province",
+      "type": "java.lang.String",
+      "description": "作者所在省份."
+    },
+    {
+      "name": "author.city",
+      "type": "java.lang.String",
+      "description": "作者所在城市."
+    }
+  ]
+}
