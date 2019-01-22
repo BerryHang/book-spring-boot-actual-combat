@@ -5,6 +5,8 @@ import com.learning.spring.boot.domain.entity.UserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
 import com.learning.spring.boot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,8 +17,10 @@ import java.util.List;
  * @Description: 用户业务操作类
  * @Date: 2019/1/21 11:09
  */
+@Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
     private UserDao userDao;
 
     @Override

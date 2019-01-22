@@ -3,7 +3,9 @@ package com.learning.spring.boot.dao;
 import com.learning.spring.boot.domain.entity.UserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,11 +15,13 @@ import java.util.List;
  * @Description: 用户数据操作类
  * @Date: 2019/1/21 11:08
  */
+@Repository
 public class UserDao {
 
     private static List<UserEntity> userEntityList;
-    
+
     static {
+        userEntityList = new ArrayList<>();
         UserEntity userEntity1 = new UserEntity(1, "李磊", "lilei", 16);
         UserEntity userEntity2 = new UserEntity(2, "小明", "xiaoming", 16);
         UserEntity userEntity3 = new UserEntity(3, "汤姆", "tom", 16);
@@ -58,7 +62,7 @@ public class UserDao {
                 maxUserId=user.getUserId();
             }
         }
-        UserEntity userEntity = new UserEntity(maxUserId, userInfo.getUserName(), userInfo.getPassword(), userInfo.getAge());
+        UserEntity userEntity = new UserEntity(maxUserId+1, userInfo.getUserName(), userInfo.getPassword(), userInfo.getAge());
         userEntityList.add(userEntity);
         return maxUserId;
     }
