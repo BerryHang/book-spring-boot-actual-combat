@@ -1,5 +1,7 @@
 package com.learning.spring.boot.domain.request;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @Package: com.learning.spring.boot.domain.request
  * @ClassName: UserCreateRequest
@@ -9,10 +11,13 @@ package com.learning.spring.boot.domain.request;
  */
 public class UserCreateRequest {
 
+    @ApiModelProperty(value = "userName",name = "userName",dataType = "String",example = "Jack")
     private String userName;
 
+    @ApiModelProperty(value = "password",name = "password",dataType = "String",example = "abc1234")
     private String password;
 
+    @ApiModelProperty(value = "age",name = "age",dataType = "int",example = "20")
     private Integer age;
 
     public String getUserName() {

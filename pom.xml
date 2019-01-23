@@ -26,7 +26,6 @@
         <module>book-spring-boot-actual-combat-jpa</module>
         <module>book-spring-boot-actual-combat-validate</module>
         <module>book-spring-boot-actual-combat-project</module>
-        <module>book-spring-boot-actual-combat-test</module>
         <module>book-spring-boot-actual-combat-swagger</module>
     </modules>
 
@@ -34,6 +33,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <swagger.version>2.8.0</swagger.version>
+        <ws.rs.version>2.1.1</ws.rs.version>
     </properties>
 
 
