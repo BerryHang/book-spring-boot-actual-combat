@@ -18,33 +18,33 @@ import java.util.List;
  * @Date: 2019/1/21 10:56
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping("/list")
+    @GetMapping("/users")
     public List<UserEntity> findUser(){
         return userService.findUserList();
     }
 
-    @GetMapping("/find/{userId}")
+    @GetMapping("/user/{userId}")
     public UserEntity findUser(@PathVariable Integer userId){
         return userService.findUser(userId);
     }
 
-    @DeleteMapping("/delete/{userId}")
+    @DeleteMapping("/user/{userId}")
     public Integer deleteUser(@PathVariable Integer userId){
         return userService.deleteUser(userId);
     }
 
-    @PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON)
+    @PostMapping(value = "/user",consumes = MediaType.APPLICATION_JSON)
     public Integer createUser(@RequestBody UserCreateRequest userInfo){
         return userService.createUser(userInfo);
     }
 
-    @PutMapping(value = "/update",consumes = MediaType.APPLICATION_JSON)
+    @PutMapping(value = "/user",consumes = MediaType.APPLICATION_JSON)
     public Integer updateUser(@RequestBody UserUpdateRequest userInfo){
         return userService.updateUser(userInfo);
     }
