@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2018-10-31 17:11:48
 */
 
+CREATE DATABASE spring_boot_actual_combat;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -28,7 +30,7 @@ CREATE TABLE `tc_sys_user` (
   `qq` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT 'QQ信息',
   `sex` tinyint(1) unsigned DEFAULT '1' COMMENT '性别',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of tc_sys_user
