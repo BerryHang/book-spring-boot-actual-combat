@@ -62,7 +62,7 @@ public class UserDao {
                 maxUserId=user.getUserId();
             }
         }
-        UserEntity userEntity = new UserEntity(maxUserId+1, userInfo.getUserName(), userInfo.getPassword(), userInfo.getAge());
+        UserEntity userEntity = UserEntity.builder().userId(maxUserId + 1).userName(userInfo.getUserName()).password(userInfo.getPassword()).age(userInfo.getAge()).build();
         userEntityList.add(userEntity);
         return maxUserId;
     }

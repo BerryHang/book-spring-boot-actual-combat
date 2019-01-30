@@ -35,13 +35,13 @@ public class UserController {
 
     @ApiOperation("根据用户ID查询用户信息")
     @GetMapping("/user/{userId}")
-    public UserEntity findUser(@PathVariable Integer userId){
+    public UserEntity findUser(@PathVariable Long userId){
         return userService.findUser(userId);
     }
 
     @ApiOperation("根据用户ID删除用户信息")
     @DeleteMapping("/user/{userId}")
-    public Integer deleteUser(@PathVariable Integer userId){
+    public Integer deleteUser(@PathVariable Long userId){
         return userService.deleteUser(userId);
     }
 

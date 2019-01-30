@@ -1,9 +1,6 @@
 package com.learning.spring.boot.domain.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @Package: com.learning.spring.boot.domain.entity
@@ -16,6 +13,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class UserEntity {
 
     private Integer userId;

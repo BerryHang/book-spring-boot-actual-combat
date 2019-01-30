@@ -25,7 +25,7 @@ CREATE TABLE `tc_sys_user` (
   `user_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `user_name` varchar(45) COLLATE utf8_bin NOT NULL COMMENT '用户名',
   `password` varchar(45) COLLATE utf8_bin NOT NULL COMMENT '密码',
-  `e_mail` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT '邮箱',
+  `email` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT '邮箱',
   `address` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT '地址',
   `qq` varchar(45) COLLATE utf8_bin DEFAULT NULL COMMENT 'QQ信息',
   `sex` tinyint(1) unsigned DEFAULT '1' COMMENT '性别',

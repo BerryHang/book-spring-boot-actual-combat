@@ -21,7 +21,16 @@ public class UserCreateRequest {
     @ApiModelProperty(value = "password",name = "password",dataType = "String",example = "abc1234")
     private String password;
 
-    @ApiModelProperty(value = "age",name = "age",dataType = "int",example = "20")
-    private Integer age;
+    @ApiModelProperty(value = "qq",name = "qq",dataType = "String",example = "1234")
+    private String qq;
+
+    @ApiModelProperty(value = "sex",name = "sex",dataType = "int",example = "1")
+    private Integer sex;
+
+    @ApiModelProperty(value = "email",name = "email",dataType = "String",example = "123@qq.com")
+    private String email;
+
+    @ApiModelProperty(value = "address",name = "address",dataType = "String",example = "上海市普陀区")
+    private String address;
 
 }

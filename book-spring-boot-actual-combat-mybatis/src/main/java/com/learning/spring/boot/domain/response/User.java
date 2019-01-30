@@ -1,6 +1,7 @@
 package com.learning.spring.boot.domain.response;
 
-import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,8 @@ import java.util.List;
  */
 @Component
 @ConfigurationProperties(prefix="author")
-@Builder
+@Setter
+@Getter
 public class User {
     private String name;
 

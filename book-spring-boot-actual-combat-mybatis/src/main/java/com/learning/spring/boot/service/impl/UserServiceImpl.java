@@ -1,9 +1,9 @@
 package com.learning.spring.boot.service.impl;
 
-import com.learning.spring.boot.dao.UserDao;
 import com.learning.spring.boot.domain.entity.UserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import com.learning.spring.boot.mapper.TcSysUserMapper;
 import com.learning.spring.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,31 +21,31 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao userDao;
+    private TcSysUserMapper tcSysUserMapper;
 
     @Override
     public List<UserEntity> findUserList(){
-       return userDao.findUserList();
+       return tcSysUserMapper.findUserList();
     }
 
     @Override
-    public UserEntity findUser(Integer userId) {
-        return userDao.findUser(userId);
+    public UserEntity findUser(Long userId) {
+        return tcSysUserMapper.findUser(userId);
     }
 
     @Override
-    public Integer deleteUser(Integer userId) {
-        return userDao.deleteUser(userId);
+    public Integer deleteUser(Long userId) {
+        return tcSysUserMapper.deleteUser(userId);
     }
 
     @Override
     public Integer createUser(UserCreateRequest userInfo) {
-        return userDao.createUser(userInfo);
+        return tcSysUserMapper.createUser(userInfo);
     }
 
     @Override
     public Integer updateUser(UserUpdateRequest userInfo) {
-        return userDao.updateUser(userInfo);
+        return tcSysUserMapper.updateUser(userInfo);
     }
 
 }
