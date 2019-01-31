@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @Package: com.learning.spring.boot.domain.entity
  * @ClassName: UserEntity
@@ -16,7 +18,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserEntity {
+public class UserEntity implements Serializable {
 
     private Integer userId;
 
@@ -24,5 +26,12 @@ public class UserEntity {
 
     private String password;
 
-    private Integer age;
+    private Integer sex;
+
+    private String email;
+
+    private String address;
+
+    private String qq;
+
 }

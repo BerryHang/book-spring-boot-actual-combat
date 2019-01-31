@@ -10,13 +10,12 @@
         <result column="address" property="address" jdbcType="DECIMAL" />
         <result column="qq" property="qq" jdbcType="TIMESTAMP" />
     </resultMap>
-
-    <select id="findUserList" resultType="com.learning.spring.boot.domain.entity.UserEntity">
+    <select id="findUserList" resultMap="baseResultMap">
         SELECT *
         FROM tc_sys_user
     </select>
 
-    <select id="findUser" parameterType="java.lang.Long" resultType="com.learning.spring.boot.domain.entity.UserEntity">
+    <select id="findUser" parameterType="java.lang.Long" resultMap="baseResultMap">
         SELECT *
         FROM tc_sys_user
         WHERE user_id= #{userId}
@@ -25,7 +24,7 @@
     <delete id="deleteUser" parameterType="java.lang.Long">
         DELETE FROM tc_sys_user WHERE user_id= #{userId}
     </delete>
-\
+
     <insert id="createUser" parameterType="com.learning.spring.boot.domain.request.UserCreateRequest">
         INSERT INTO tc_sys_user (user_name, password, qq, sex, email, address)
         VALUES (#{userName}, #{password}, #{qq}, #{sex}, #{email}, #{address})
@@ -33,13 +32,12 @@
 
     <update id="updateUser" parameterType="com.learning.spring.boot.domain.request.UserUpdateRequest">
         UPDATE tc_sys_user SET
-            user_name = #{userName},
-            password = #{password},
-            qq = #{qq},
-            sex = #{sex},
-            email = #{email},
-            address = #{address}
+                               user_name = #{userName},
+                               password = #{password},
+                               qq = #{qq},
+                               sex = #{sex},
+                               email = #{email},
+                               address = #{address}
         WHERE user_id = #{userId}
     </update>
-
 </mapper>

@@ -1,6 +1,6 @@
 package com.learning.spring.boot.controller;
 
-import com.learning.spring.boot.domain.entity.UserEntity;
+import com.learning.spring.boot.domain.entity.TcSysUserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
 import com.learning.spring.boot.service.UserService;
@@ -29,13 +29,13 @@ public class UserController {
 
     @ApiOperation("查询用户列表")
     @GetMapping("/users")
-    public List<UserEntity> findUser(){
+    public List<TcSysUserEntity> findUser(){
         return userService.findUserList();
     }
 
     @ApiOperation("根据用户ID查询用户信息")
     @GetMapping("/user/{userId}")
-    public UserEntity findUser(@PathVariable Long userId){
+    public TcSysUserEntity findUser(@PathVariable Long userId){
         return userService.findUser(userId);
     }
 

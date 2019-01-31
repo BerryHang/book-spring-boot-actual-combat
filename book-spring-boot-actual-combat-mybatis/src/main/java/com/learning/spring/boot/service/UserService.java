@@ -1,6 +1,6 @@
 package com.learning.spring.boot.service;
 
-import com.learning.spring.boot.domain.entity.UserEntity;
+import com.learning.spring.boot.domain.entity.TcSysUserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<UserEntity> findUserList();
+    List<TcSysUserEntity> findUserList();
 
-    UserEntity findUser(Long userId);
+    TcSysUserEntity findUser(Long userId);
 
     Integer deleteUser(Long userId);
 

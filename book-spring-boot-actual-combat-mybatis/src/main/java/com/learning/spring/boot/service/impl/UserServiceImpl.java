@@ -1,5 +1,6 @@
 package com.learning.spring.boot.service.impl;
 
+import com.learning.spring.boot.domain.entity.TcSysUserEntity;
 import com.learning.spring.boot.domain.entity.UserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
@@ -24,12 +25,12 @@ public class UserServiceImpl implements UserService {
     private TcSysUserMapper tcSysUserMapper;
 
     @Override
-    public List<UserEntity> findUserList(){
+    public List<TcSysUserEntity> findUserList(){
        return tcSysUserMapper.findUserList();
     }
 
     @Override
-    public UserEntity findUser(Long userId) {
+    public TcSysUserEntity findUser(Long userId) {
         return tcSysUserMapper.findUser(userId);
     }
 
