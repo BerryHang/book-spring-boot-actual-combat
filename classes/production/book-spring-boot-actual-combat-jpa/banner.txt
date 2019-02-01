@@ -1,7 +1,0 @@
-${AnsiBackground.MAGENTA}
-   _     _     _     _     _     _       _     _     _     _
-  / \   / \   / \   / \   / \   / \     / \   / \   / \   / \
- ( s ) ( p ) ( r ) ( i ) ( n ) ( g )   ( b ) ( o ) ( o ) ( t )
-  \_/   \_/   \_/   \_/   \_/   \_/     \_/   \_/   \_/   \_/
-
-${AnsiColor.BLUE}作者：Berry Haung
