@@ -43,7 +43,7 @@ public class SwaggerConfiguration {
         return new ApiInfoBuilder()
                 .title("SpringBoot-Swagger2集成")
                 .description("SpringBoot-Swagger2集成和使用")
-                .termsOfServiceUrl("http://localhost:8888/swagger-ui.html")
+                .termsOfServiceUrl("http://localhost:8080/swagger-ui.html")
                 // 作者信息
                 .contact(new Contact("BerryHuang", "https://berryhang.github.io/", "1127348148@qq.com"))
                 .version("1.0.0")
