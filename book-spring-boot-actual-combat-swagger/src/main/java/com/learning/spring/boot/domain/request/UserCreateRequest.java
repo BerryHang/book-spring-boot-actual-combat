@@ -1,5 +1,6 @@
 package com.learning.spring.boot.domain.request;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -9,6 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @Description: 创建用户时的入参对象
  * @Date: 2019/1/21 14:21
  */
+@ApiModel
 public class UserCreateRequest {
 
     @ApiModelProperty(value = "userName",name = "userName",dataType = "String",example = "Jack")
