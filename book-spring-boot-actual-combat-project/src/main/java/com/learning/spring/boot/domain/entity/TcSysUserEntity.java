@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Packa1ge: com.learning.spring.boot.domain.entity
+ * @Package: com.learning.spring.boot.domain.entity
  * @ClassName: TcSysUserEntity
  * @Author: beibei.huang
  * @Description: 用户实体 与数据库对应
