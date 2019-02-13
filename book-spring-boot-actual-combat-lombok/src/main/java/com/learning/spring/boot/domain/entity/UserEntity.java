@@ -9,11 +9,6 @@ import lombok.*;
  * @Description: 用户实体
  * @Date: 2019/1/21 10:58
  */
-@Setter
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class UserEntity {
 
     private Integer userId;
@@ -22,5 +17,8 @@ public class UserEntity {
 
     private String password;
 
+    @NonNull
     private Integer age;
+
+    private boolean gender;
 }
