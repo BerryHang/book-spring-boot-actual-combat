@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author beibei.huang
  * @Title: BookSpringBootActualCombatJspApplication
  * @ProjectName book-spring-boot-actual-combat-parent
- * @Description: TODO
+ * @Description: JSP应用启动类
  * @date 2018/11/2    15:19
  */
 @SpringBootApplication
