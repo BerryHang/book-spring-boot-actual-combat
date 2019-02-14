@@ -1,6 +1,7 @@
 package com.learning.spring.boot.domain.entity;
 
 import lombok.*;
+import lombok.experimental.FieldNameConstants;
 
 /**
  * @Package: com.learning.spring.boot.domain.entity
@@ -9,6 +10,7 @@ import lombok.*;
  * @Description: 用户实体
  * @Date: 2019/1/21 10:58
  */
+@Builder
 public class UserEntity {
 
     private Integer userId;
@@ -17,8 +19,12 @@ public class UserEntity {
 
     private String password;
 
-    @NonNull
     private Integer age;
 
     private boolean gender;
 }
+
+
+
+
+
