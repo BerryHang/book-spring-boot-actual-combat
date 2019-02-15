@@ -3,43 +3,50 @@ package com.learning.spring.boot.domain.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.io.Serializable;
-
 /**
- * @author beibei.huang
- * @Title: TcSysUserEntity
- * @ProjectName spring-boot-learning
- * @Description: 与数据库表对应给用户实体
- * @date 2018/10/26    10:34
+ * @Packa1ge: com.learning.spring.boot.domain.entity
+ * @ClassName: TcSysUserEntity
+ * @Author: beibei.huang
+ * @Description: 用户实体 与数据库对应
+ * @Date: 2019/1/30 15:32
  */
-@Entity
-@Getter
 @Setter
-@Table(name = "tc_sys_user")
-public class TcSysUserEntity implements Serializable {
+@Getter
+public class TcSysUserEntity {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "user_id")
+    /**
+     * 用户ID
+     */
     private Long userId;
 
-    @Column(name = "user_name")
+    /**
+     * 用户名
+     */
     private String userName;
 
-    @Column(name = "password")
+    /**
+     * 密码
+     */
     private String password;
 
-    @Column(name = "e_mail")
-    private String eMail;
+    /**
+     * 邮箱
+     */
+    private String email;
 
-    @Column(name = "address")
+    /**
+     * 地址
+     */
     private String address;
 
-    @Column(name = "qq")
+    /**
+     * QQ号码
+     */
     private String qq;
 
-    @Column(name = "sex")
-    private Byte sex;
+    /**
+     * 性别
+     */
+    private Integer sex;
 
 }

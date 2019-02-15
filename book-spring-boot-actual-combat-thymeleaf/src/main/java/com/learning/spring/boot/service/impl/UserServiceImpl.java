@@ -1,7 +1,9 @@
 package com.learning.spring.boot.service.impl;
 
 import com.learning.spring.boot.domain.entity.TcSysUserEntity;
-import com.learning.spring.boot.jpa.TcSysUserJPA;
+import com.learning.spring.boot.domain.request.UserCreateRequest;
+import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import com.learning.spring.boot.mapper.TcSysUserMapper;
 import com.learning.spring.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,26 +11,41 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author beibei.huang
- * @Title: UserServiceImpl
- * @ProjectName spring-boot-learning
- * @Description: 用户业务实现类
- * @date 2018/10/26    11:24
+ * @Package: com.learning.spring.boot.service.impl
+ * @ClassName: UserServiceImpl
+ * @Author: beibei.huang
+ * @Description: 用户业务操作类
+ * @Date: 2019/1/21 11:09
  */
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private TcSysUserJPA tcSysUserJPA;
-
+    private TcSysUserMapper tcSysUserMapper;
 
     @Override
-    public List<TcSysUserEntity> findAll() {
-        /*TcSysUserEntity tcSysUserEntity = new TcSysUserEntity();
-        tcSysUserEntity.setUserId(1L);
-        List<TcSysUserEntity> list = new ArrayList<>();
-        list.add(tcSysUserEntity);
-        return list;*/
-        return tcSysUserJPA.findAll();
+    public List<TcSysUserEntity> findUserList(){
+       return tcSysUserMapper.findUserList();
     }
+
+    @Override
+    public TcSysUserEntity findUser(Long userId) {
+        return tcSysUserMapper.findUser(userId);
+    }
+
+    @Override
+    public Integer deleteUser(Long userId) {
+        return tcSysUserMapper.deleteUser(userId);
+    }
+
+    @Override
+    public Integer createUser(UserCreateRequest userInfo) {
+        return tcSysUserMapper.createUser(userInfo);
+    }
+
+    @Override
+    public Integer updateUser(UserUpdateRequest userInfo) {
+        return tcSysUserMapper.updateUser(userInfo);
+    }
+
 }
