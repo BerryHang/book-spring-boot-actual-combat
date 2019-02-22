@@ -4,7 +4,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,24 +17,8 @@ import java.io.IOException;
  */
 @RestController
 @RequestMapping("/upload")
-@Api("文件上传API")
+@Api(tags = "文件上传API")
 public class UploadController {
-
-    @ApiOperation(value = "跳转至J2EE文件上传页面" , notes = "跳转至J2EE文件上传页面")
-    @GetMapping("/j2ee/page")
-    public ModelAndView jumpJ2eePage(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("/upload/j2ee");
-        return mv;
-    }
-
-    @ApiOperation(value = "跳转至apache文件上传页面" , notes = "跳转至apache文件上传页面")
-    @GetMapping("/apache/page")
-    public ModelAndView jumpApachePage(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("/upload/apache");
-        return mv;
-    }
 
     @ApiOperation(value = "使用java自带实现文件上传功能" , notes = "使用java自带实现文件上传功能")
     @PostMapping("/j2ee")

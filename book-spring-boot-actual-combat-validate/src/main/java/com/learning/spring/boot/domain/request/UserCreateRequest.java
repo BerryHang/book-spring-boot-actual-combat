@@ -1,6 +1,6 @@
 package com.learning.spring.boot.domain.request;
 
-import com.learning.spring.boot.validation.annotation.GenderValidation;
+import com.learning.spring.boot.validation.annotation.Gender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,7 +32,7 @@ public class UserCreateRequest {
     private String qq;
 
     @ApiModelProperty(value = "gender",name = "性别",dataType = "int",example = "1")
-    @GenderValidation()
+    @Gender()
     private Integer gender;
 
     @ApiModelProperty(value = "email",name = "E-mail地址",dataType = "String",example = "123@qq.com")

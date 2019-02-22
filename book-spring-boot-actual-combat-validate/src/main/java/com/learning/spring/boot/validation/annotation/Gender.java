@@ -2,9 +2,9 @@ package com.learning.spring.boot.validation.annotation;
 
 /**
  * @Package: com.learning.spring.boot.validation.annotation
- * @ClassName:
+ * @ClassName: Gender
  * @Author: beibei.huang
- * @Description: ${description}
+ * @Description: 性别自定义校验
  * @Date: 2019/2/14 10:15
  */
 
@@ -18,7 +18,7 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface GenderValidation {
+public @interface Gender {
 
     String message() default "性别参数非法";
 

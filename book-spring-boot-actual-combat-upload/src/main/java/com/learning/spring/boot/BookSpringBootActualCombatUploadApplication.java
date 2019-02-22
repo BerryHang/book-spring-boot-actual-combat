@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookSpringBootActualCombatThymeleafApplication {
+public class BookSpringBootActualCombatUploadApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BookSpringBootActualCombatThymeleafApplication.class, args);
+        SpringApplication.run(BookSpringBootActualCombatUploadApplication.class, args);
     }
 }

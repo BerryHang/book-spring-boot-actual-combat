@@ -1,7 +1,7 @@
 package com.learning.spring.boot.validation.validator;
 
 import com.learning.spring.boot.enums.GenderEnum;
-import com.learning.spring.boot.validation.annotation.GenderValidation;
+import com.learning.spring.boot.validation.annotation.Gender;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -13,7 +13,7 @@ import javax.validation.ConstraintValidatorContext;
  * @Description: 性别枚举类验证
  * @Date: 2019/2/14 10:13
  */
-public class GenderValidator implements ConstraintValidator <GenderValidation,Integer>{
+public class GenderValidator implements ConstraintValidator <Gender,Integer>{
 
     @Override
     public boolean isValid(Integer value, ConstraintValidatorContext context) {
