@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<h2>用户信息</h2>
+    用户ID：<span th:text="${user.userId}">userId</span> <br/>
+    用户名：<span th:text="${user.userName}">userName</span> <br/>
+    密码：<span th:text="${user.password}">password</span> <br/>
+    E-mail：<span th:text="${user.email}">email</span> <br/>
+    地址：<span th:text="${user.address}">address</span> <br/>
+    QQ：<span th:text="${user.qq}">qq</span> <br/>
+    性别：<span th:text="${user.sex}">sex</span> <br/>
+</body>
+</html>

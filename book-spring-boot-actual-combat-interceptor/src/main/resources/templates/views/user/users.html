@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<h2>用户信息列表</h2>
+<table border="1">
+    <tr>
+        <th>用户名</th>
+        <th>状态变量：index</th>
+        <th>状态变量：count</th>
+        <th>状态变量：size</th>
+        <th>状态变量：current.userName</th>
+        <th>状态变量：even</th>
+        <th>状态变量：odd</th>
+        <th>状态变量：first</th>
+        <th>状态变量：last</th>
+    </tr>
+    <tr  th:each="user,userStat : ${users}">
+        <td th:text="${user.userName}"></td>
+        <th th:text="${userStat.index}"></th>
+        <th th:text="${userStat.count}"></th>
+        <th th:text="${userStat.size}"></th>
+        <th th:text="${userStat.current.userName}"></th>
+        <th th:text="${userStat.even}"></th>
+        <th th:text="${userStat.odd}"></th>
+        <th th:text="${userStat.first}"></th>
+        <th th:text="${userStat.last}"></th>
+    </tr>
+</table>
+
+</body>
+</html>
