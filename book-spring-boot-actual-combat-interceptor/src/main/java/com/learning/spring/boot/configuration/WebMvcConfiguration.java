@@ -7,13 +7,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
-/**
- * @author beibei.huang
- * @Title: WebMvcConfiguration
- * @ProjectName spring-boot-learning
- * @Description: MVC的配置类
- * @date 2018/10/23    10:40
- */
 @Configuration
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
 
