@@ -33,6 +33,7 @@
         <module>book-spring-boot-actual-combat-filter</module>
         <module>book-spring-boot-actual-combat-interceptor</module>
         <module>book-spring-boot-actual-combat-listener</module>
+        <module>book-spring-boot-actual-combat-exception</module>
     </modules>
 
     <properties>
