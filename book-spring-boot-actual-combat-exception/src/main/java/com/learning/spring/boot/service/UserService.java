@@ -17,7 +17,7 @@ public interface UserService {
 
     List<TcSysUserEntity> findUserList();
 
-    TcSysUserEntity findUser(Long userId);
+    TcSysUserEntity findUser(Long userId) ;
 
     Integer deleteUser(Long userId);
 

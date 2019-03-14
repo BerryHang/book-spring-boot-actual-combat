@@ -3,6 +3,7 @@ package com.learning.spring.boot.service.impl;
 import com.learning.spring.boot.domain.entity.TcSysUserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import com.learning.spring.boot.exception.ServiceException;
 import com.learning.spring.boot.mapper.TcSysUserMapper;
 import com.learning.spring.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public TcSysUserEntity findUser(Long userId) {
-        return tcSysUserMapper.findUser(userId);
+        TcSysUserEntity user = tcSysUserMapper.findUser(userId);
+        if (null==user){
+            throw new ServiceException("用户不存在");
+        }
+        return user;
     }
 
     @Override
