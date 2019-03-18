@@ -34,6 +34,7 @@
         <module>book-spring-boot-actual-combat-interceptor</module>
         <module>book-spring-boot-actual-combat-listener</module>
         <module>book-spring-boot-actual-combat-exception</module>
+        <module>book-spring-boot-actual-combat-shiro</module>
     </modules>
 
     <properties>
@@ -50,6 +51,7 @@
         <druid.version>1.0.24</druid.version>
         <logging.version>1.8.0-beta2</logging.version>
         <fileupload.version>1.3.3</fileupload.version>
+        <shiro.version>1.4.0</shiro.version>
     </properties>
 
 </project>

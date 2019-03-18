@@ -1,0 +1,47 @@
+###插入用户
+insert into t_sys_user (user_name,password) values ('admin','admin123');
+
+###插入菜单
+insert into t_sys_menu (menu_name, menu_href, parent_menu_id, permissions, menu_level,sort
+) values ('系统设置','/system',0,'system',1,10);
+insert into t_sys_menu (menu_name, menu_href, parent_menu_id, permissions, menu_level,sort
+) values ('用户设置','/system/user',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system')a),'system:user',2,1);
+insert into t_sys_menu (menu_name, menu_href, parent_menu_id, permissions, menu_level,sort
+) values ('角色设置','/system/role',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system')a),'system:role',2,2);
+
+###插入角色
+insert into t_sys_role (role_name) values ('系统管理员');
+
+###插入角色和菜单关系
+insert into t_com_role_menu_relation(menu_id, role_id) values (1,1);
+insert into t_com_role_menu_relation(menu_id, role_id) values (2,1);
+insert into t_com_role_menu_relation(menu_id, role_id) values (3,1);
+insert into t_com_user_role_relation(user_id, role_id)values (1,1);
+
+###插入动作
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('新增',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/user')a),'system:user:add','新增用户',1);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('编辑',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/user')a),'system:user:edit','编辑用户',2);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('详情',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/user')a),'system:user:detail','查看用户详情',3);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('删除',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/user')a),'system:user:delete','删除用户',4);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('新增',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/role')a),'system:role:add','新增角色',1);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('编辑',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/role')a),'system:role:edit','编辑角色',2);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('详情',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/role')a),'system:role:detail','查看角色详情',3);
+insert into t_sys_action(action_name, menu_id, permissions, description, sort)
+values ('删除',(select menu_id from (select menu_id from t_sys_menu where  menu_href='/system/role')a),'system:role:delete','删除角色',4);
+
+####添加用户动作关联关系
+insert into t_com_role_action_relation (action_id, role_id) values (1, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (2, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (3, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (4, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (5, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (6, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (7, 1);
+insert into t_com_role_action_relation (action_id, role_id) values (8, 1);
