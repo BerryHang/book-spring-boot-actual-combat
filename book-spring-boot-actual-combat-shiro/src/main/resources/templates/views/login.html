@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- #include file="head.html" -->
+    <div th:replace="global.html :: common_resource"></div>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  class="container center-block" style="width: fit-content;text-align: center">
+        <div class="widget-container widget_login styled boxed boxed-cream">
+            <div class="inner">
+                <form action="#" method="post" class="loginform">
+                    <div class="field_text">
+                        <label for="user_login2" class="label_title">用户名</label>
+                        <input type="text" name="log2" id="user_login2" value="" placeholder="用户名"/>
+                        <span class="input_icon input_email"></span>
+                    </div>
+                    <div class="field_text">
+                        <label for="user_pass2" class="label_title">密码</label>
+                        <input type="password" name="pwd2" id="user_pass2" value="" placeholder="密码"/>
+                        <span class="input_icon input_pass"></span>
+                    </div>
+                    <div class="rowRemember clearfix">
+                        <div class="forgetmenot input_styled checklist">
+                            <div class="rowCheckbox checkbox-middle">
+                                <input type="checkbox" name="remember2" id="remember2" value="" checked>
+                                <label for="remember2">记住</label>
+                            </div>
+                        </div>
+                        <span class="forget_password"><a href="#">忘记密码?</a></span>
+                    </div>
+                    <div class="rowSubmit">
+                <span class="btn btn-hover">
+                    <input type="submit" name="login-submit2" id="login-submit2" value="登录"/>
+                </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+</body>
+</html>

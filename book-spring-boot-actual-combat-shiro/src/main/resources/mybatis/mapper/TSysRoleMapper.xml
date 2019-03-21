@@ -263,4 +263,15 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where role_id = #{roleId,jdbcType=INTEGER}
   </update>
+
+  <select id="getRoleByIds" parameterType="java.util.Set" resultMap="BaseResultMap">
+    select
+      <include refid="Base_Column_List" />
+    from t_sys_role
+    where role_id in
+    <foreach collection="set" open="(" separator="," item="roleId" close=")">
+      #{roleId}
+    </foreach>
+  </select>
+
 </mapper>

@@ -52,6 +52,7 @@
         <logging.version>1.8.0-beta2</logging.version>
         <fileupload.version>1.3.3</fileupload.version>
         <shiro.version>1.4.0</shiro.version>
+        <shiro.redis.version>3.2.3</shiro.redis.version>
     </properties>
 
 </project>

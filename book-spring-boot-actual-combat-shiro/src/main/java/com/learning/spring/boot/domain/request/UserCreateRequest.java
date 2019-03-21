@@ -1,12 +1,12 @@
 package com.learning.spring.boot.domain.request;
 
-import com.learning.spring.boot.validation.annotation.GenderValidation;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.*;
-import java.util.Date;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 /**
  * @Package: com.learning.spring.boot.domain.request
@@ -27,32 +27,5 @@ public class UserCreateRequest {
     @Pattern(regexp = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$")
     @NotEmpty
     private String password;
-
-    @ApiModelProperty(value = "qq",name = "QQ号",dataType = "String",example = "1234")
-    private String qq;
-
-    @ApiModelProperty(value = "gender",name = "性别",dataType = "int",example = "1")
-    @GenderValidation()
-    private Integer gender;
-
-    @ApiModelProperty(value = "email",name = "E-mail地址",dataType = "String",example = "123@qq.com")
-    @Email
-    private String email;
-
-    @ApiModelProperty(value = "address",name = "家庭住址",dataType = "String",example = "上海市普陀区")
-    private String address;
-
-    @ApiModelProperty(value = "age",name = "年龄",dataType = "int",example = "20")
-    @NotNull
-    @Min(0)
-    @Max(150)
-    private Integer age;
-
-    @ApiModelProperty(value = "salary",name = "薪水",dataType = "double",example = "12545.2")
-    private Double salary;
-
-    @ApiModelProperty(value = "birthday",name = "出生日期",dataType = "Date",example = "1900-00-00")
-    @Past
-    private Date birthday;
 
 }

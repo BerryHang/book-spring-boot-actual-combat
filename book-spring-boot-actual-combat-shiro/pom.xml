@@ -71,7 +71,17 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-all</artifactId>
             <version>${shiro.version}</version>
-            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.shiro</groupId>
+                    <artifactId>shiro-quartz</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.crazycake</groupId>
+            <artifactId>shiro-redis</artifactId>
+            <version>${shiro.redis.version}</version>
         </dependency>
     </dependencies>
 
