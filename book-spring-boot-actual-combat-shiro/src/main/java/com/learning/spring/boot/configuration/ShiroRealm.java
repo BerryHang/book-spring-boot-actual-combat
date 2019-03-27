@@ -5,13 +5,16 @@ import com.learning.spring.boot.mapper.TComUserRoleRelationMapper;
 import com.learning.spring.boot.mapper.TSysRoleMapper;
 import com.learning.spring.boot.mapper.TSysUserMapper;
 import com.learning.spring.boot.service.CommonService;
+import com.learning.spring.boot.util.SpringUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 
 import java.util.List;
 import java.util.Set;
@@ -27,17 +30,12 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ShiroRealm extends AuthorizingRealm {
 
-    @Autowired
-    private CommonService commonService;
-
-    @Autowired
-    private TSysUserMapper tSysUserMapper;
-
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         log.info("---------------- 执行 Shiro 权限获取 ---------------------");
         Object principal = principalCollection.getPrimaryPrincipal();
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
+        CommonService commonService = SpringUtil.getBean(CommonService.class);
         if (principal instanceof TSysUser) {
             TSysUser userLogin = (TSysUser) principal;
             Set<String> roles = commonService.getRolesByUserId(userLogin.getUserId());
@@ -60,9 +58,11 @@ public class ShiroRealm extends AuthorizingRealm {
         TSysUserExample user = new TSysUserExample();
         user.createCriteria().andUserNameEqualTo(username).andPasswordEqualTo(password).andFlagEqualTo(false);
 
+        TSysUserMapper tSysUserMapper = SpringUtil.getBean(TSysUserMapper.class);
+
         // 从数据库获取对应用户名密码的用户
         List<TSysUser> tSysUsers = tSysUserMapper.selectByExample(user);
-        if (tSysUsers != null) {
+        if (CollectionUtils.isNotEmpty(tSysUsers)) {
             // 用户为禁用状态
             log.info("---------------- Shiro 凭证认证成功 ----------------------");
             SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(

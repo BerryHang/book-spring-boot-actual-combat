@@ -1,7 +1,9 @@
 package com.learning.spring.boot.domain.entity;
 
-import lombok.*;
-import lombok.experimental.FieldNameConstants;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @Package: com.learning.spring.boot.domain.entity
@@ -11,6 +13,9 @@ import lombok.experimental.FieldNameConstants;
  * @Date: 2019/1/21 10:58
  */
 @Builder
+@AllArgsConstructor
+@Getter
+@Setter
 public class UserEntity {
 
     private Integer userId;
@@ -20,8 +25,6 @@ public class UserEntity {
     private String password;
 
     private Integer age;
-
-    private boolean gender;
 }
 
 
