@@ -2,11 +2,15 @@ package com.learning.spring.boot.mapper;
 
 import com.learning.spring.boot.domain.entity.TSysMenu;
 import com.learning.spring.boot.domain.entity.TSysMenuExample;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
+import java.util.Set;
 
 /**
  * TSysMenuMapper继承基类
  */
-@Repository
+@Mapper
 public interface TSysMenuMapper extends BaseMapper<TSysMenu, Integer, TSysMenuExample> {
+    List<TSysMenu> getMenuPermissionsByIds(Set<Integer> menus);
 }

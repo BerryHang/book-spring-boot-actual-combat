@@ -2,11 +2,11 @@ package com.learning.spring.boot.mapper;
 
 import com.learning.spring.boot.domain.entity.TComRoleActionRelation;
 import com.learning.spring.boot.domain.entity.TComRoleActionRelationExample;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * TComRoleActionRelationMapper继承基类
  */
-@Repository
+@Mapper
 public interface TComRoleActionRelationMapper extends BaseMapper<TComRoleActionRelation, Integer, TComRoleActionRelationExample> {
 }

@@ -2,11 +2,11 @@ package com.learning.spring.boot.mapper;
 
 import com.learning.spring.boot.domain.entity.TComUserRoleRelation;
 import com.learning.spring.boot.domain.entity.TComUserRoleRelationExample;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * TComUserRoleRelationMapper继承基类
  */
-@Repository
+@Mapper
 public interface TComUserRoleRelationMapper extends BaseMapper<TComUserRoleRelation, Integer, TComUserRoleRelationExample> {
 }

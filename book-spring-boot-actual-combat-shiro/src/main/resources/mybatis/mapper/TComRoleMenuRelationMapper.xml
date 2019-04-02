@@ -281,4 +281,14 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where role_menu_relation_id = #{roleMenuRelationId,jdbcType=INTEGER}
   </update>
+
+  <select id="getMenuByIds" parameterType="java.util.Set" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"></include>
+    from t_com_role_menu_relation
+    where role_id in
+    <foreach collection="collection" open="(" separator="," item="roleId" close=")">
+      #{roleId}
+    </foreach>
+  </select>
 </mapper>

@@ -269,7 +269,7 @@
       <include refid="Base_Column_List" />
     from t_sys_role
     where role_id in
-    <foreach collection="set" open="(" separator="," item="roleId" close=")">
+    <foreach collection="collection" open="(" separator="," item="roleId" close=")">
       #{roleId}
     </foreach>
   </select>

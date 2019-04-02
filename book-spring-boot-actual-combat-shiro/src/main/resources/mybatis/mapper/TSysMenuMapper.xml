@@ -343,4 +343,14 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where menu_id = #{menuId,jdbcType=INTEGER}
   </update>
+
+  <select id="getMenuPermissionsByIds" parameterType="java.util.Set" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"></include>
+    from t_sys_menu
+    where menu_id in
+    <foreach collection="collection" open="(" separator="," item="menuId" close=")">
+      #{menuId}
+    </foreach>
+  </select>
 </mapper>
