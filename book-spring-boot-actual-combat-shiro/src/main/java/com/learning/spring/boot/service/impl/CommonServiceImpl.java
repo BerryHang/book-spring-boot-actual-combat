@@ -27,7 +27,6 @@ public class CommonServiceImpl implements CommonService {
     @Autowired
     private TSysRoleMapper tSysRoleMapper;
 
-
     @Autowired
     private TSysMenuMapper tSysMenuMapper;
 
