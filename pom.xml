@@ -35,6 +35,7 @@
         <module>book-spring-boot-actual-combat-listener</module>
         <module>book-spring-boot-actual-combat-exception</module>
         <module>book-spring-boot-actual-combat-shiro</module>
+        <module>book-spring-boot-actual-combat-logging</module>
     </modules>
 
     <properties>
