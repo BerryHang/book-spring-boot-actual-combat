@@ -1,0 +1,29 @@
+<!-- Page Sidebar -->
+<div class="page-sidebar">
+    <a class="logo-box" href="/index">
+        <span>ecaps</span>
+        <i class="icon-radio_button_unchecked" id="fixed-sidebar-toggle-button"></i>
+        <i class="icon-close" id="sidebar-toggle-button-close"></i>
+    </a>
+    <div class="page-sidebar-inner">
+        <div class="page-sidebar-menu">
+            <ul class="accordion-menu">
+                <li class="active-page">
+                    <a href="/index">
+                        <i class="menu-icon icon-home4"></i><span>Dashboard</span>
+                    </a>
+                </li>
+                <li shiro:hasPermission="system">
+                    <a href="javascript:void(0)">
+                        <i class="menu-icon icon-flash_on"></i><span>系统管理</span><i
+                            class="accordion-icon fa fa-angle-left"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li shiro:hasPermission="system:user"><a th:href="@{system/user/list}">用户设置</a></li>
+                        <li shiro:hasPermission="system:role"><a th:href="@{system/role}">角色设置</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><!-- /Page Sidebar -->

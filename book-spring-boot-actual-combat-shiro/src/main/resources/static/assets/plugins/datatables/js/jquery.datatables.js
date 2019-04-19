@@ -3215,7 +3215,7 @@
 				cell.html( column.sTitle );
 			}
 	
-			_fnRenderer( oSettings, 'header' )(
+			_fnRenderer( oSettings, 'templates.views.common.header' )(
 				oSettings, cell, column, classes
 			);
 		}
@@ -3474,7 +3474,7 @@
 		}
 	
 		/* Header and footer callbacks */
-		_fnCallbackFire( oSettings, 'aoHeaderCallback', 'header', [ $(oSettings.nTHead).children('tr')[0],
+		_fnCallbackFire( oSettings, 'aoHeaderCallback', 'templates.views.common.header', [ $(oSettings.nTHead).children('tr')[0],
 			_fnGetDataMaster( oSettings ), iDisplayStart, iDisplayEnd, aiDisplay ] );
 	
 		_fnCallbackFire( oSettings, 'aoFooterCallback', 'footer', [ $(oSettings.nTFoot).children('tr')[0],

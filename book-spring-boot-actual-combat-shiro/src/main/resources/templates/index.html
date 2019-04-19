@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+    <head>
+        <div data-th-include="common/header-stylesheet"></div>
+        <!-- Title -->
+        <title>Home</title>
+    </head>
+    <body>
+
+    <!-- Page Container -->
+    <div class="page-container">
+        <div data-th-include="common/page-left-sidebar"></div>
+        <!-- Page Content -->
+        <div class="page-content">
+            <div data-th-include="common/top-header"></div>
+            <!-- Page Inner -->
+            <div class="page-inner">
+                <div class="page-title">
+                    <h3 class="breadcrumb-header">Dashboard</h3>
+                </div>
+                <div id="main-wrapper">
+                    <div class="row">
+
+                    </div><!-- Row -->
+                </div><!-- Main Wrapper -->
+               <div data-th-include="common/footer"></div>
+            </div><!-- /Page Inner -->
+            <div data-th-include="common/page-right-sidebar"></div>
+        </div><!-- /Page Content -->
+    </div><!-- /Page Container -->
+    <div data-th-include="common/footer-js"></div>
+    </body>
+</html>
