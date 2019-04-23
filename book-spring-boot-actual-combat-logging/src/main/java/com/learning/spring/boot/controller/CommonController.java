@@ -26,7 +26,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Api(tags = "公共功能操作API")
 public class CommonController {
 
-
     @ApiOperation("跳转至登录页面")
     @GetMapping("/login")
     public ModelAndView login(){
