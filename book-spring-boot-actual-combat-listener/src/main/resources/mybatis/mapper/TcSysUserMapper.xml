@@ -27,7 +27,7 @@
 
     <insert id="createUser" parameterType="com.learning.spring.boot.domain.request.UserCreateRequest">
         INSERT INTO tc_sys_user (user_name, password, qq, sex, email, address)
-        VALUES (#{userName}, #{password}, #{qq}, #{sex}, #{email}, #{address})
+        VALUES (#{userName}, #{password}, #{qq}, #{gender}, #{email}, #{address})
     </insert>
 
     <update id="updateUser" parameterType="com.learning.spring.boot.domain.request.UserUpdateRequest">

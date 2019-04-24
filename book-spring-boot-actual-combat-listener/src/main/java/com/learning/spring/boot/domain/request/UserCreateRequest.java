@@ -4,6 +4,7 @@ import com.learning.spring.boot.validation.annotation.GenderValidation;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.validation.constraints.*;
 import java.util.Date;
@@ -17,6 +18,7 @@ import java.util.Date;
  */
 @Setter
 @Getter
+@ToString
 public class UserCreateRequest {
 
     @ApiModelProperty(value = "userName",name = "用户名",dataType = "String",example = "Jack")

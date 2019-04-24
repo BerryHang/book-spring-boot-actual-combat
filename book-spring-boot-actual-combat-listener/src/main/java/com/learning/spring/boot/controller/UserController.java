@@ -3,10 +3,13 @@ package com.learning.spring.boot.controller;
 import com.learning.spring.boot.domain.entity.TcSysUserEntity;
 import com.learning.spring.boot.domain.request.UserCreateRequest;
 import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import com.learning.spring.boot.event.CreateUserEvent;
 import com.learning.spring.boot.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -25,10 +28,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 @Api(tags = "用户操作API")
+@Slf4j
 public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    ApplicationEventPublisher eventPublisher;
 
     @ApiOperation("查询用户列表")
     @GetMapping("/users")
@@ -65,6 +72,12 @@ public class UserController {
     public ModelAndView createUser(@RequestBody @Validated UserCreateRequest userInfo){
         ModelAndView mv = new ModelAndView();
         Integer createCount = userService.createUser(userInfo);
+        log.info("发布applicationEvent事件,发布内容：{}",userInfo);
+        eventPublisher.publishEvent(new CreateUserEvent(this,userInfo));
+        log.info("applicationEvent事件发布成功");
+        log.info("发布对象事件,发布内容：{}",userInfo);
+        eventPublisher.publishEvent(userInfo);
+        log.info("对象事件发布成功");
         mv.addObject("count",createCount);
         mv.setViewName("success");
         return mv;
