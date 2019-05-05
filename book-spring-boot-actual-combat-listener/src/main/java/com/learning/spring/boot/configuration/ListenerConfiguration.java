@@ -26,7 +26,7 @@ public class ListenerConfiguration {
     }
 
     /**
-     * 监听 code为oKong的事件
+     * 监听 code为Berry的事件
      */
     @EventListener(condition="#createUserEvent.userCreateRequest.userName == 'Berry'")
     public void handleCustomEventByCondition(CreateUserEvent createUserEvent) {
