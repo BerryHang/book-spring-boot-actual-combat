@@ -37,6 +37,7 @@
         <module>book-spring-boot-actual-combat-shiro</module>
         <module>book-spring-boot-actual-combat-logging</module>
         <module>book-spring-boot-actual-combat-schedule</module>
+        <module>book-spring-boot-actual-combat-email</module>
     </modules>
 
     <properties>
