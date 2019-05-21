@@ -3,6 +3,7 @@ package com.learning.spring.boot.domain.request;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @Package: com.learning.spring.boot.domain.request
@@ -13,6 +14,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@ToString
 public class UserLoginBean {
 
     @ApiModelProperty(value = "userName",name = "userName",dataType = "String",example = "Jack")
