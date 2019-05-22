@@ -76,7 +76,7 @@ public class LogAspect {
     }
 
     /**
-     * 指定拦截器规则；也可直接使用within(@org.springframework.web.bind.annotation.RestController *)
+     * 指定拦截器规则；
      * 这样简单点 可以通用
      * @param 异常对象
      */
@@ -88,9 +88,6 @@ public class LogAspect {
         //throw new AopException("xxx);
     }
 
-    /**
-     * 转至：https://my.oschina.net/u/994081/blog/185982
-     */
     public static String getIpAddr(HttpServletRequest request) {
         String ipAddress = null;
         try {
