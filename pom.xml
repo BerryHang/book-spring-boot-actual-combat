@@ -38,6 +38,7 @@
         <module>book-spring-boot-actual-combat-logging</module>
         <module>book-spring-boot-actual-combat-schedule</module>
         <module>book-spring-boot-actual-combat-email</module>
+        <module>book-spring-boot-actual-combat-web-service</module>
     </modules>
 
     <properties>
