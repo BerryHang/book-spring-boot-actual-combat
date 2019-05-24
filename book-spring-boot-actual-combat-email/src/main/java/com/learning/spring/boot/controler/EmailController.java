@@ -1,6 +1,7 @@
 package com.learning.spring.boot.controler;
 
 import com.learning.spring.boot.configuration.EmailConfig;
+import com.learning.spring.boot.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -21,25 +22,26 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailController {
 
   @Autowired
-  private JavaMailSender javaMailSender;
-
-  @Autowired
-  private EmailConfig emailConfig;
-
-  @Value("${spring.mail.from.username}")
-  private String mailFrom;
-
-  @Value("${spring.mail.to.username}")
-  private String mailTo;
+  private EmailService emailService;
 
   @GetMapping("simple")
-  public void sendEmail(){
-    SimpleMailMessage message = new SimpleMailMessage();
-    message.setFrom(mailFrom);
-    message.setTo(mailTo);
-    message.setSubject("测试邮件发送");
-    message.setText("测试纯文本邮件发送，此为文本内容。");
-    javaMailSender.send(message);
+  public void sendSimpleEmail(){
+    emailService.sendSimpleEmail();
+  }
+
+  @GetMapping("enclosure")
+  public void sendEnclosureEmail(){
+    emailService.sendSimpleEmail();
+  }
+
+  @GetMapping("html")
+  public void sendHtmlEmail(){
+    emailService.sendHtmlEmail();
+  }
+
+  @GetMapping("template")
+  public void sendTemplateEmail(){
+    emailService.sendTemplateEmail();
   }
 
 }

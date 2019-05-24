@@ -9,4 +9,12 @@ package com.learning.spring.boot.service;
  */
 public interface EmailService {
 
+    void sendSimpleEmail();
+
+    void sendEnclosureEmail();
+
+    void sendHtmlEmail();
+
+    void sendTemplateEmail();
+
 }

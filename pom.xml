@@ -59,6 +59,7 @@
         <shiro.redis.version>3.2.3</shiro.redis.version>
         <apache.commons.lang3.version>3.8.1</apache.commons.lang3.version>
         <thymeleaf.shiro.version>2.0.0</thymeleaf.shiro.version>
+        <wsdl4j.version>1.6.3</wsdl4j.version>
     </properties>
 
 </project>
