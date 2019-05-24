@@ -2,6 +2,7 @@ package com.learning.spring.boot.controler;
 
 import com.learning.spring.boot.configuration.EmailConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,19 +21,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailController {
 
   @Autowired
-  private JavaMailSender mailSender;
+  private JavaMailSender javaMailSender;
 
   @Autowired
   private EmailConfig emailConfig;
 
+  @Value("${spring.mail.from.username}")
+  private String mailFrom;
+
+  @Value("${spring.mail.to.username}")
+  private String mailTo;
+
   @GetMapping("simple")
   public void sendEmail(){
     SimpleMailMessage message = new SimpleMailMessage();
-    message.setFrom(emailConfig.getMailFrom());
-    message.setTo(emailConfig.getMailTo());
+    message.setFrom(mailFrom);
+    message.setTo(mailTo);
     message.setSubject("测试邮件发送");
     message.setText("测试纯文本邮件发送，此为文本内容。");
-    mailSender.send(message);
+    javaMailSender.send(message);
   }
 
 }

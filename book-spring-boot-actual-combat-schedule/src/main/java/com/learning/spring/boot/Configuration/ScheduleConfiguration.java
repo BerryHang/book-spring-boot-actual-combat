@@ -24,7 +24,7 @@ public class ScheduleConfiguration {
     taskExecutor.setMaxPoolSize(200);
     taskExecutor.setQueueCapacity(25);
     taskExecutor.setKeepAliveSeconds(200);
-    taskExecutor.setThreadNamePrefix("oKong-Scheduled-");
+    taskExecutor.setThreadNamePrefix("Scheduled-Pool");
     // 线程池对拒绝任务（无线程可用）的处理策略，目前只支持AbortPolicy、CallerRunsPolicy；默认为后者
     taskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
     //调度器shutdown被调用时等待当前被调度的任务完成
