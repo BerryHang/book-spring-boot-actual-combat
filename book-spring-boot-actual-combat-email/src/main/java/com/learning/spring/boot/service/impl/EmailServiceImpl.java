@@ -7,7 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.io.File;
 
 /**
  * @Package: com.learning.spring.boot.service.impl
@@ -41,16 +46,25 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void sendEnclosureEmail() {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 
+        MimeMessageHelper helper = null;
+        try {
+            helper = new MimeMessageHelper(mimeMessage, true);
+
+            helper.setFrom(emailProperties.getUsername());
+            helper.setTo(mailTo);
+            helper.setSubject("测试带附件的件邮件发送");
+            helper.setText("<html><body>Email Img<img src='cid:qrCode'></body></html>",true);
+            //添加附件
+            File qrCode = new File("D:\\qrCode.jpg");
+            //建议文件带上后缀，可支持在线预览
+            helper.addAttachment("qrCode.jpg", qrCode);
+            helper.addInline("qrCode", qrCode);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        javaMailSender.send(mimeMessage);
     }
 
-    @Override
-    public void sendHtmlEmail() {
-
-    }
-
-    @Override
-    public void sendTemplateEmail() {
-
-    }
 }

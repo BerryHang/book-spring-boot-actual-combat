@@ -24,24 +24,14 @@ public class EmailController {
   @Autowired
   private EmailService emailService;
 
-  @GetMapping("simple")
-  public void sendSimpleEmail(){
-    emailService.sendSimpleEmail();
-  }
+    @GetMapping("simple")
+    public void sendSimpleEmail() {
+        emailService.sendSimpleEmail();
+    }
 
-  @GetMapping("enclosure")
-  public void sendEnclosureEmail(){
-    emailService.sendSimpleEmail();
-  }
-
-  @GetMapping("html")
-  public void sendHtmlEmail(){
-    emailService.sendHtmlEmail();
-  }
-
-  @GetMapping("template")
-  public void sendTemplateEmail(){
-    emailService.sendTemplateEmail();
-  }
+    @GetMapping("enclosure")
+    public void sendEnclosureEmail() {
+        emailService.sendEnclosureEmail();
+    }
 
 }
