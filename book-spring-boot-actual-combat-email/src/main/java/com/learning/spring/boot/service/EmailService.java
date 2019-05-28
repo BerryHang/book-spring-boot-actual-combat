@@ -13,4 +13,6 @@ public interface EmailService {
 
     void sendEnclosureEmail();
 
+    void sendHtmlEmail();
+
 }

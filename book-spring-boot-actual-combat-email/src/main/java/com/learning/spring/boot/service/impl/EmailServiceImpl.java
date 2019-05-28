@@ -55,12 +55,35 @@ public class EmailServiceImpl implements EmailService {
             helper.setFrom(emailProperties.getUsername());
             helper.setTo(mailTo);
             helper.setSubject("测试带附件的件邮件发送");
-            helper.setText("<html><body>Email Img<img src='cid:qrCode'></body></html>",true);
+            helper.setText("测试带附件的件邮件发送,附件为图片。");
             //添加附件
             File qrCode = new File("D:\\qrCode.jpg");
             //建议文件带上后缀，可支持在线预览
             helper.addAttachment("qrCode.jpg", qrCode);
-            helper.addInline("qrCode", qrCode);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        javaMailSender.send(mimeMessage);
+    }
+
+    @Override
+    public void sendHtmlEmail() {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+
+        MimeMessageHelper helper = null;
+        try {
+            helper = new MimeMessageHelper(mimeMessage, true);
+
+            helper.setFrom(emailProperties.getUsername());
+            helper.setTo(mailTo);
+            helper.setSubject("测试HTML格式的件邮件发送");
+            helper.setText("<html><body><div>Email Img: qrCode.jpg</div><div><img src='cid:qrCodeImg'></div></body></html>",true);
+
+            //添加附件
+            File qrCode = new File("D:\\qrCode.jpg");
+            //建议文件带上后缀，可支持在线预览
+            helper.addAttachment("qrCode.jpg", qrCode);
+            helper.addInline("qrCodeImg", qrCode);
         } catch (MessagingException e) {
             e.printStackTrace();
         }
