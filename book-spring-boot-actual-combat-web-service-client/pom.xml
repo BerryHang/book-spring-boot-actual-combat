@@ -52,7 +52,7 @@
                 </executions>
                 <configuration>
                     <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>cn.lqdev.webservice</generatePackage>
+                    <generatePackage>com.learning.spring.boot.webservice</generatePackage>
                     <generateDirectory>${basedir}/src/main/java</generateDirectory>
                     <schemas>
                         <schema>

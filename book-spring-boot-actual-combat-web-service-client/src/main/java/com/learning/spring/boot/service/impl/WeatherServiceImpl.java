@@ -1,0 +1,27 @@
+package com.learning.spring.boot.service.impl;
+
+import com.learning.spring.boot.service.WeatherService;
+import com.learning.spring.boot.webservice.ArrayOfString;
+import com.learning.spring.boot.webservice.WeatherWebService;
+import com.learning.spring.boot.webservice.WeatherWebServiceSoap;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * @Package: com.learning.spring.boot.service.impl
+ * @ClassName: WeatherServiceImpl
+ * @Author: beibei.huang
+ * @Description: 天气信息相关业务操作实现类
+ * @Date: 2019/5/29 8:27
+ */
+@Service
+public class WeatherServiceImpl implements WeatherService {
+    @Override
+    public List<String> queryWeatherInfoByCity(String cityName) {
+        WeatherWebService weatherWebService = new WeatherWebService();
+        WeatherWebServiceSoap weatherWebServiceSoap = weatherWebService.getWeatherWebServiceSoap();
+        ArrayOfString weatherInfo = weatherWebServiceSoap.getWeatherbyCityName(cityName);
+        return weatherInfo.getString();
+    }
+}
