@@ -1,5 +1,5 @@
 
-package com.learning.spring.boot.webservice;
+package com.learning.spring.boot.webservice.client;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "")
-@XmlRootElement(name = "getSupportProvince")
-public class GetSupportProvince {
+@XmlRootElement(name = "getSupportDataSet")
+public class GetSupportDataSet {
 
 
 }

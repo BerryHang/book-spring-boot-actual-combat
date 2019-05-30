@@ -1,10 +1,9 @@
 package com.learning.spring.boot.service.impl;
 
 import com.learning.spring.boot.service.WeatherService;
-import com.learning.spring.boot.webservice.ArrayOfString;
-import com.learning.spring.boot.webservice.WeatherWebService;
-import com.learning.spring.boot.webservice.WeatherWebServiceSoap;
+import com.learning.spring.boot.webservice.client.*;
 import org.springframework.stereotype.Service;
+import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ import java.util.List;
  * @Date: 2019/5/29 8:27
  */
 @Service
-public class WeatherServiceImpl implements WeatherService {
+public class WeatherServiceImpl extends WebServiceGatewaySupport implements WeatherService {
     @Override
     public List<String> queryWeatherInfoByCity(String cityName) {
         WeatherWebService weatherWebService = new WeatherWebService();
@@ -24,4 +23,13 @@ public class WeatherServiceImpl implements WeatherService {
         ArrayOfString weatherInfo = weatherWebServiceSoap.getWeatherbyCityName(cityName);
         return weatherInfo.getString();
     }
+
+    @Override
+    public GetWeatherbyCityNameResponse queryWeatherInfoByCityName(String cityName) {
+        GetWeatherbyCityName cityInfo = new GetWeatherbyCityName();
+        cityInfo.setTheCityName(cityName);
+        Object o = getWebServiceTemplate().marshalSendAndReceive(cityInfo);
+        return new GetWeatherbyCityNameResponse();
+    }
+
 }

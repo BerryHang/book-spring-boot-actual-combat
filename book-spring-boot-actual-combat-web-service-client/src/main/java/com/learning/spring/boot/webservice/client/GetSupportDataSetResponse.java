@@ -1,5 +1,5 @@
 
-package com.learning.spring.boot.webservice;
+package com.learning.spring.boot.webservice.client;
 
 import java.util.ArrayList;
 import java.util.List;

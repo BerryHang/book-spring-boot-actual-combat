@@ -1,5 +1,5 @@
 
-package com.learning.spring.boot.webservice;
+package com.learning.spring.boot.webservice.client;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="byProvinceName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="getWeatherbyCityNameProResult" type="{http://WebXml.com.cn/}ArrayOfString" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,35 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "byProvinceName"
+    "getWeatherbyCityNameProResult"
 })
-@XmlRootElement(name = "getSupportCity")
-public class GetSupportCity {
+@XmlRootElement(name = "getWeatherbyCityNameProResponse")
+public class GetWeatherbyCityNameProResponse {
 
-    protected String byProvinceName;
+    protected ArrayOfString getWeatherbyCityNameProResult;
 
     /**
-     * 获取byProvinceName属性的值。
+     * 获取getWeatherbyCityNameProResult属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ArrayOfString }
      *     
      */
-    public String getByProvinceName() {
-        return byProvinceName;
+    public ArrayOfString getGetWeatherbyCityNameProResult() {
+        return getWeatherbyCityNameProResult;
     }
 
     /**
-     * 设置byProvinceName属性的值。
+     * 设置getWeatherbyCityNameProResult属性的值。
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ArrayOfString }
      *     
      */
-    public void setByProvinceName(String value) {
-        this.byProvinceName = value;
+    public void setGetWeatherbyCityNameProResult(ArrayOfString value) {
+        this.getWeatherbyCityNameProResult = value;
     }
 
 }

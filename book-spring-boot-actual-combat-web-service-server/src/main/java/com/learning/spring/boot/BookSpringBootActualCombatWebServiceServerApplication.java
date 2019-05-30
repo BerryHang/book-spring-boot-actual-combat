@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookSpringBootActualCombatEmailApplication {
+public class BookSpringBootActualCombatWebServiceServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BookSpringBootActualCombatEmailApplication.class, args);
+        SpringApplication.run(BookSpringBootActualCombatWebServiceServerApplication.class, args);
     }
 }

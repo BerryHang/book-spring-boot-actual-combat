@@ -1,5 +1,5 @@
 
-package com.learning.spring.boot.webservice;
+package com.learning.spring.boot.webservice.client;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

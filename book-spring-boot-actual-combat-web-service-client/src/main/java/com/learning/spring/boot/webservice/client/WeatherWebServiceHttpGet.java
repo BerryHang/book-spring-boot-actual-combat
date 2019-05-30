@@ -1,5 +1,5 @@
 
-package com.learning.spring.boot.webservice;
+package com.learning.spring.boot.webservice.client;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "WeatherWebServiceHttpPost", targetNamespace = "http://WebXml.com.cn/")
+@WebService(name = "WeatherWebServiceHttpGet", targetNamespace = "http://WebXml.com.cn/")
 @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 @XmlSeeAlso({
     ObjectFactory.class
 })
-public interface WeatherWebServiceHttpPost {
+public interface WeatherWebServiceHttpGet {
 
 
     /**
@@ -28,7 +28,7 @@ public interface WeatherWebServiceHttpPost {
      * 
      * @param byProvinceName
      * @return
-     *     returns com.learning.spring.boot.webservice.ArrayOfString
+     *     returns com.learning.spring.boot.webservice.client.ArrayOfString
      */
     @WebMethod
     @WebResult(name = "ArrayOfString", targetNamespace = "http://WebXml.com.cn/", partName = "Body")
@@ -40,7 +40,7 @@ public interface WeatherWebServiceHttpPost {
      * <br /><h3>获得本天气预报Web Services支持的洲、国内外省份和城市信息</h3><p>输入参数：无； 返回数据：一个一维字符串数组 String()，内容为洲或国内省份的名称。</p><br />
      * 
      * @return
-     *     returns com.learning.spring.boot.webservice.ArrayOfString
+     *     returns com.learning.spring.boot.webservice.client.ArrayOfString
      */
     @WebMethod
     @WebResult(name = "ArrayOfString", targetNamespace = "http://WebXml.com.cn/", partName = "Body")
@@ -50,7 +50,7 @@ public interface WeatherWebServiceHttpPost {
      * <br><h3>获得本天气预报Web Services支持的洲、国内外省份和城市信息</h3><p>输入参数：无；返回：DataSet 。DataSet.Tables(0) 为支持的洲和国内省份数据，DataSet.Tables(1) 为支持的国内外城市或地区数据。DataSet.Tables(0).Rows(i).Item("ID") 主键对应 DataSet.Tables(1).Rows(i).Item("ZoneID") 外键。<br />Tables(0)：ID = ID主键，Zone = 支持的洲、省份；Tables(1)：ID 主键，ZoneID = 对应Tables(0)ID的外键，Area = 城市或地区，AreaCode = 城市或地区代码。</p><br />
      * 
      * @return
-     *     returns com.learning.spring.boot.webservice.DataSet
+     *     returns com.learning.spring.boot.webservice.client.DataSet
      */
     @WebMethod
     @WebResult(name = "DataSet", targetNamespace = "http://WebXml.com.cn/", partName = "Body")
@@ -61,7 +61,7 @@ public interface WeatherWebServiceHttpPost {
      * 
      * @param theCityName
      * @return
-     *     returns com.learning.spring.boot.webservice.ArrayOfString
+     *     returns com.learning.spring.boot.webservice.client.ArrayOfString
      */
     @WebMethod
     @WebResult(name = "ArrayOfString", targetNamespace = "http://WebXml.com.cn/", partName = "Body")
@@ -75,7 +75,7 @@ public interface WeatherWebServiceHttpPost {
      * @param theCityName
      * @param theUserID
      * @return
-     *     returns com.learning.spring.boot.webservice.ArrayOfString
+     *     returns com.learning.spring.boot.webservice.client.ArrayOfString
      */
     @WebMethod
     @WebResult(name = "ArrayOfString", targetNamespace = "http://WebXml.com.cn/", partName = "Body")
