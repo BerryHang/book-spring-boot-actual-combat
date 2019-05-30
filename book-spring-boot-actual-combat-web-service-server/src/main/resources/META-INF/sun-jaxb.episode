@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2019.05.29 时间 08:20:44 AM CST 
+
+  -->
+  <bindings xmlns:tns="http://WebXml.com.cn/" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="com.learning.spring.boot.webservice"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getSupportDataSetResponse">
+      <class ref="com.learning.spring.boot.webservice.GetSupportDataSetResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSupportCity">
+      <class ref="com.learning.spring.boot.webservice.GetSupportCity"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSupportCityResponse">
+      <class ref="com.learning.spring.boot.webservice.GetSupportCityResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:ArrayOfString">
+      <class ref="com.learning.spring.boot.webservice.ArrayOfString"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSupportProvince">
+      <class ref="com.learning.spring.boot.webservice.GetSupportProvince"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSupportProvinceResponse">
+      <class ref="com.learning.spring.boot.webservice.GetSupportProvinceResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getSupportDataSet">
+      <class ref="com.learning.spring.boot.webservice.GetSupportDataSet"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getWeatherbyCityName">
+      <class ref="com.learning.spring.boot.webservice.GetWeatherbyCityName"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getWeatherbyCityNameResponse">
+      <class ref="com.learning.spring.boot.webservice.GetWeatherbyCityNameResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getWeatherbyCityNamePro">
+      <class ref="com.learning.spring.boot.webservice.GetWeatherbyCityNamePro"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getWeatherbyCityNameProResponse">
+      <class ref="com.learning.spring.boot.webservice.GetWeatherbyCityNameProResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
