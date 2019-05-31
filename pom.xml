@@ -40,6 +40,7 @@
         <module>book-spring-boot-actual-combat-email</module>
         <module>book-spring-boot-actual-combat-web-service-server</module>
         <module>book-spring-boot-actual-combat-web-service-client</module>
+        <module>book-spring-boot-actual-combat-web-socket</module>
     </modules>
 
     <properties>
