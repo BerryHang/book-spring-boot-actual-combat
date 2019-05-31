@@ -24,12 +24,4 @@ public class WeatherServiceImpl extends WebServiceGatewaySupport implements Weat
         return weatherInfo.getString();
     }
 
-    @Override
-    public GetWeatherbyCityNameResponse queryWeatherInfoByCityName(String cityName) {
-        GetWeatherbyCityName cityInfo = new GetWeatherbyCityName();
-        cityInfo.setTheCityName(cityName);
-        Object o = getWebServiceTemplate().marshalSendAndReceive(cityInfo);
-        return new GetWeatherbyCityNameResponse();
-    }
-
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://127.0.0.1:8080"
+           targetNamespace="http://127.0.0.1:8080" elementFormDefault="qualified">
+
+    <!-- 定义请求实体 -->
+    <xs:element name="weatherInfoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cityName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- 定义响应实体 -->
+    <xs:element name="weatherInfoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="weatherInfo" type="tns:weatherInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- 定义天气 信息 -->
+    <xs:complexType name="weatherInfo">
+        <xs:sequence>
+            <!-- 省份名称  -->
+            <xs:element name="provinceName" type="xs:string" />
+            <!-- 城市名称  -->
+            <xs:element name="cityName" type="xs:string"/>
+            <!-- 城市代码 -->
+            <xs:element name="cityCode" type="xs:string" />
+            <!-- 温度 -->
+            <xs:element name="temperature" type="xs:string" />
+            <!-- 概况 -->
+            <xs:element name="survey" type="xs:string" />
+            <!-- 风力 -->
+            <xs:element name="windPower" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

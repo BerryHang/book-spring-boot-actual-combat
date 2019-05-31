@@ -1,7 +1,5 @@
 package com.learning.spring.boot.service;
 
-import com.learning.spring.boot.webservice.client.GetWeatherbyCityNameResponse;
-
 import java.util.List;
 
 /**
@@ -15,5 +13,4 @@ public interface WeatherService {
 
     List<String> queryWeatherInfoByCity(String cityName);
 
-    GetWeatherbyCityNameResponse queryWeatherInfoByCityName(String cityName);
 }
