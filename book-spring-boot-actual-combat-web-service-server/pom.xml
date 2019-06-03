@@ -55,7 +55,8 @@
                     <schemaDirectory>${project.basedir}/src/main/resources/schemas/</schemaDirectory>
                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                     <clearOutputDir>false</clearOutputDir>
-                    <!-- 包名路径 -->               <packageName>com.learning.spring.boot.webservice.server</packageName>
+                    <!-- 包名路径 -->
+                    <packageName>com.learning.spring.boot.webservice.server</packageName>
                 </configuration>
             </plugin>
         </plugins>
