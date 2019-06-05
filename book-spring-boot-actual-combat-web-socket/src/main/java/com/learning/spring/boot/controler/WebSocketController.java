@@ -39,7 +39,7 @@ public class WebSocketController {
         String message = "游客[" + username + "]退出聊天室!";
         log.info(message);
         WebSocketUtil.remoteSession(username);
-        //此时可向所有的在线通知 某某某登录了聊天室
+        //此时可向所有的在线通知 某某某退出了聊天室
         WebSocketUtil.sendMessageForAll(message);
     }
 

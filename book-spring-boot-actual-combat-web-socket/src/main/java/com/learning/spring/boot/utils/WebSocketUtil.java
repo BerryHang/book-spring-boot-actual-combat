@@ -23,9 +23,7 @@ public class WebSocketUtil {
     public static void addSession(String userNick,Session session) {
         //putIfAbsent 添加键—值对的时候，先判断该键值对是否已经存在
         //不存在：新增，并返回null
-        //存在：不覆盖，直接返回已存在的值
-//    	ONLINE_SESSION.putIfAbsent(userNick, session);
-        //简单示例 不考虑复杂情况。。怎么简单怎么来了。。
+        //存在：覆盖，直接返回新值
         ONLINE_SESSION.put(userNick, session);
     }
 
@@ -53,7 +51,6 @@ public class WebSocketUtil {
      * @param message
      */
     public static void sendMessageForAll(String message) {
-        //jdk8 新方法
         ONLINE_SESSION.forEach((sessionId, session) -> sendMessage(session, message));
     }
 
