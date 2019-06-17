@@ -65,6 +65,14 @@
         <maven-jaxb2-plugin.version>0.13.0</maven-jaxb2-plugin.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <fastjson.version>1.2.58</fastjson.version>
+        <poi.version>3.13</poi.version>
+        <jsoup.version>1.11.3</jsoup.version>
+        <javacsv.version>2.0</javacsv.version>
+        <reflections.version>0.9.11</reflections.version>
+        <google.guava.version>27.1-jre</google.guava.version>
+        <ip2region.version>1.7.2</ip2region.version>
+        <jasypt.version>2.1.1</jasypt.version>
+        <joda.time.version>2.10.2</joda.time.version>
     </properties>
 
 </project>
