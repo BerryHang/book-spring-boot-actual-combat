@@ -41,6 +41,8 @@
         <module>book-spring-boot-actual-combat-web-service-server</module>
         <module>book-spring-boot-actual-combat-web-service-client</module>
         <module>book-spring-boot-actual-combat-web-socket</module>
+        <module>book-spring-boot-actual-combat-test</module>
+        <module>book-spring-boot-actual-combat-actuator</module>
     </modules>
 
     <properties>
