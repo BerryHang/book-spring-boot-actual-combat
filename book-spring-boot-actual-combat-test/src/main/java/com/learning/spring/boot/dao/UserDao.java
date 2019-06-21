@@ -64,7 +64,7 @@ public class UserDao {
         }
         UserEntity userEntity = new UserEntity(maxUserId+1, userInfo.getUserName(), userInfo.getPassword(), userInfo.getAge());
         userEntityList.add(userEntity);
-        return maxUserId;
+        return maxUserId+1;
     }
 
     public Integer updateUser(UserUpdateRequest userInfo){
