@@ -1,9 +1,8 @@
 package cc.mrbird;
 
 import cc.mrbird.common.config.FebsProperties;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -20,12 +19,11 @@ import java.time.LocalTime;
 @EnableConfigurationProperties({FebsProperties.class})
 @EnableCaching
 @EnableAsync
+@Slf4j
 public class Application {
-
-    private static Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        log.info("《《《《《《 FEBS started up successfully at {} {} 》》》》》》", LocalDate.now(), LocalTime.now());
+        log.info("《《《《《《 book-spring-boot-actual-combat-project started up successfully at {} {} 》》》》》》", LocalDate.now(), LocalTime.now());
     }
 }

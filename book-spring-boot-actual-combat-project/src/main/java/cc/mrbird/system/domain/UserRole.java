@@ -1,10 +1,14 @@
 package cc.mrbird.system.domain;
 
-import java.io.Serializable;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
+import java.io.Serializable;
 
+@Setter
+@Getter
 @Table(name = "t_user_role")
 public class UserRole implements Serializable{
 	
@@ -16,31 +20,4 @@ public class UserRole implements Serializable{
 	@Column(name = "ROLE_ID")
 	private Long roleId;
 
-	/**
-	 * @return USER_ID
-	 */
-	public Long getUserId() {
-		return userId;
-	}
-
-	/**
-	 * @param userId
-	 */
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	/**
-	 * @return ROLE_ID
-	 */
-	public Long getRoleId() {
-		return roleId;
-	}
-
-	/**
-	 * @param roleId
-	 */
-	public void setRoleId(Long roleId) {
-		this.roleId = roleId;
-	}
 }

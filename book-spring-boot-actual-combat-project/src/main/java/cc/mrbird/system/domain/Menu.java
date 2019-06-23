@@ -1,15 +1,18 @@
 package cc.mrbird.system.domain;
 
-import java.io.Serializable;
-import java.util.Date;
+import cc.mrbird.common.annotation.ExportConfig;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Date;
 
-import cc.mrbird.common.annotation.ExportConfig;
-
+@Setter
+@Getter
 @Table(name = "t_menu")
 public class Menu implements Serializable {
 
@@ -58,143 +61,4 @@ public class Menu implements Serializable {
 	@Column(name = "MODIFY_TIME")
 	private Date modifyTime;
 
-	/**
-	 * @return MENU_ID
-	 */
-	public Long getMenuId() {
-		return menuId;
-	}
-
-	/**
-	 * @param menuId
-	 */
-	public void setMenuId(Long menuId) {
-		this.menuId = menuId;
-	}
-
-	/**
-	 * @return PARENT_ID
-	 */
-	public Long getParentId() {
-		return parentId;
-	}
-
-	/**
-	 * @param parentId
-	 */
-	public void setParentId(Long parentId) {
-		this.parentId = parentId;
-	}
-
-	/**
-	 * @return MENU_NAME
-	 */
-	public String getMenuName() {
-		return menuName;
-	}
-
-	/**
-	 * @param menuName
-	 */
-	public void setMenuName(String menuName) {
-		this.menuName = menuName == null ? "" : menuName.trim();
-	}
-
-	/**
-	 * @return URL
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * @param url
-	 */
-	public void setUrl(String url) {
-		this.url = url == null ? "" : url.trim();
-	}
-
-	/**
-	 * @return PERMS
-	 */
-	public String getPerms() {
-		return perms;
-	}
-
-	/**
-	 * @param perms
-	 */
-	public void setPerms(String perms) {
-		this.perms = perms == null ? "" : perms.trim();
-	}
-
-	/**
-	 * @return ICON
-	 */
-	public String getIcon() {
-		return icon;
-	}
-
-	/**
-	 * @param icon
-	 */
-	public void setIcon(String icon) {
-		this.icon = icon == null ? "" : icon.trim();
-	}
-
-	/**
-	 * @return TYPE
-	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * @param type
-	 */
-	public void setType(String type) {
-		this.type = type == null ? "" : type.trim();
-	}
-
-	/**
-	 * @return ORDER_NUM
-	 */
-	public Long getOrderNum() {
-		return orderNum;
-	}
-
-	/**
-	 * @param orderNum
-	 */
-	public void setOrderNum(Long orderNum) {
-		this.orderNum = orderNum;
-	}
-
-	/**
-	 * @return CREATE_TIME
-	 */
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	/**
-	 * @param createTime
-	 */
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	/**
-	 * @return MODIFY_TIME
-	 */
-	public Date getModifyTime() {
-		return modifyTime;
-	}
-
-	/**
-	 * @param modifyTime
-	 */
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
 }

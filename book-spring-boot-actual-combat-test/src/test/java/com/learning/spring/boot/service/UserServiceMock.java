@@ -54,4 +54,10 @@ public class UserServiceMock {
                 .andExpect(MockMvcResultMatchers.content().json("{\"userId\":1,\"userName\":\"李磊\",\"password\":\"lilei\",\"age\":16}"));
     }
 
+    @Test
+    public void findUserReturn() throws Exception{
+        mvc.perform(MockMvcRequestBuilders.get("/user/1")).andDo(print()).andReturn();
+
+    }
+
 }

@@ -1,8 +1,13 @@
 package cc.mrbird.system.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@Setter
+@Getter
 public class UserOnline implements Serializable{
 	
 	private static final long serialVersionUID = 3828664348416633856L;
@@ -28,86 +33,4 @@ public class UserOnline implements Serializable{
     // 所在地
     private String location;
 
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getHost() {
-		return host;
-	}
-
-	public void setHost(String host) {
-		this.host = host;
-	}
-
-	public String getSystemHost() {
-		return systemHost;
-	}
-
-	public void setSystemHost(String systemHost) {
-		this.systemHost = systemHost;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public Date getStartTimestamp() {
-		return startTimestamp;
-	}
-
-	public void setStartTimestamp(Date startTimestamp) {
-		this.startTimestamp = startTimestamp;
-	}
-
-	public Date getLastAccessTime() {
-		return lastAccessTime;
-	}
-
-	public void setLastAccessTime(Date lastAccessTime) {
-		this.lastAccessTime = lastAccessTime;
-	}
-
-	public Long getTimeout() {
-		return timeout;
-	}
-
-	public void setTimeout(Long timeout) {
-		this.timeout = timeout;
-	}
-
-    
 }
