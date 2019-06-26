@@ -20,10 +20,10 @@ import java.time.LocalTime;
 @EnableCaching
 @EnableAsync
 @Slf4j
-public class Application {
+public class BookSpringBootActualCombatProjectApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(BookSpringBootActualCombatProjectApplication.class, args);
         log.info("《《《《《《 book-spring-boot-actual-combat-project started up successfully at {} {} 》》》》》》", LocalDate.now(), LocalTime.now());
     }
 }

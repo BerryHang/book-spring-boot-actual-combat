@@ -184,7 +184,7 @@ CREATE TABLE `t_dept` (
   `ORDER_NUM` bigint(20) DEFAULT NULL COMMENT '排序',
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`DEPT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_dept
@@ -263,7 +263,7 @@ CREATE TABLE `t_job_log` (
   `TIMES` decimal(11,0) DEFAULT NULL COMMENT '耗时(单位：毫秒)',
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`LOG_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2476 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for t_log
@@ -280,7 +280,7 @@ CREATE TABLE `t_log` (
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   `location` varchar(50) DEFAULT NULL COMMENT '操作地点',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=860 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for t_menu
@@ -298,7 +298,7 @@ CREATE TABLE `t_menu` (
   `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
   `MODIFY_TIME` datetime DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`MENU_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_menu
@@ -363,7 +363,7 @@ CREATE TABLE `t_role` (
   `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
   `MODIFY_TIME` datetime DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`ROLE_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_role
@@ -512,7 +512,7 @@ CREATE TABLE `t_user` (
   `AVATAR` varchar(100) DEFAULT NULL COMMENT '头像',
   `DESCRIPTION` varchar(100) DEFAULT NULL COMMENT '描述',
   PRIMARY KEY (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=167 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
