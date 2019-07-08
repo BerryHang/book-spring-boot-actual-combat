@@ -25,7 +25,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserEntity> findUserList(){
-       return userDao.findUserList();
+        System.out.println("测试devtools");
+        return userDao.findUserList();
     }
 
     @Override
