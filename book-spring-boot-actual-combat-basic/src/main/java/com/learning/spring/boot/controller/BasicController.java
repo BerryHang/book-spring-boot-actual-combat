@@ -20,7 +20,7 @@ public class BasicController {
 
     @GetMapping("/")
     public String helloSpringBoot(){
-        return "Hello Spring boot!";
+        return "Hello Spring Boot！";
     }
 
     @GetMapping("/info")
