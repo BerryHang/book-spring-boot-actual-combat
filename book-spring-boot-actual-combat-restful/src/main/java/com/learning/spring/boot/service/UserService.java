@@ -15,13 +15,37 @@ import java.util.List;
  */
 public interface UserService {
 
+    /**
+     * 查询用户列表
+     * @return
+     */
     List<UserEntity> findUserList();
 
+    /**
+     * 根据用户ID获取用户信息
+     * @param userId
+     * @return
+     */
     UserEntity findUser(Integer userId);
 
+    /**
+     * 根据用户ID删除用户信息
+     * @param userId
+     * @return
+     */
     Integer deleteUser(Integer userId);
 
+    /**
+     * 创建用户
+     * @param userInfo
+     * @return
+     */
     Integer createUser(UserCreateRequest userInfo);
 
+    /**
+     * 根据用户ID更新用户信息
+     * @param userInfo
+     * @return
+     */
     Integer updateUser(UserUpdateRequest userInfo);
 }

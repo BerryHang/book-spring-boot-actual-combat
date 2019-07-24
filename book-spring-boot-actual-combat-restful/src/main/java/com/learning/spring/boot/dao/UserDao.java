@@ -15,11 +15,13 @@ import java.util.List;
  * @Description: 用户数据操作类
  * @Date: 2019/1/21 11:08
  */
+//声明一个数据处理层
 @Repository
 public class UserDao {
 
     private static List<UserEntity> userEntityList;
 
+    //初始化数据信息
     static {
         userEntityList = new ArrayList<>();
         UserEntity userEntity1 = new UserEntity(1, "李磊", "lilei", 16);
