@@ -21,9 +21,11 @@ public class WebSocketUtil {
     private static final Map<String, Session> ONLINE_SESSION = new ConcurrentHashMap<>();
 
     public static void addSession(String userNick,Session session) {
-        //putIfAbsent 添加键—值对的时候，先判断该键值对是否已经存在
-        //不存在：新增，并返回null
-        //存在：覆盖，直接返回新值
+        /**
+         * 添加键—值对的时候，先判断该键值对是否已经存在
+         * 不存在：新增，并返回null
+         * 存在：覆盖，直接返回新值
+         */
         ONLINE_SESSION.put(userNick, session);
     }
 

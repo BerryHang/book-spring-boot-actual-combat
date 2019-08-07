@@ -42,11 +42,11 @@ public class WebServiceServerConfiguration extends WsConfigurerAdapter {
 
     //name 就是对应 wsdl名如 ：/ws/author.wsdl
     @Bean(name = "weatherInfo")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema authorSchema) {
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema xsdSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("weatherInfoPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setSchema(authorSchema);
+        wsdl11Definition.setSchema(xsdSchema);
         wsdl11Definition.setTargetNamespace(WsConstant.NAMESPACE_URI);
         return wsdl11Definition;
     }
