@@ -1,8 +1,7 @@
 package com.learning.spring.boot.controller;
 
 import com.learning.spring.boot.domain.entity.UserEntity;
-import com.learning.spring.boot.domain.request.UserCreateRequest;
-import com.learning.spring.boot.domain.request.UserUpdateRequest;
+import com.learning.spring.boot.domain.request.*;
 import com.learning.spring.boot.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -56,4 +55,51 @@ public class UserController {
     public Integer updateUser(@RequestBody UserUpdateRequest userInfo){
         return userService.updateUser(userInfo);
     }
+
+    @PostMapping(value = "/update/clue",consumes = MediaType.APPLICATION_JSON)
+    public Integer updateClue(@RequestBody ClueInfo clueInfo){
+        return null;
+    }
+
+    @PostMapping(value = "/create/clue",consumes = MediaType.APPLICATION_JSON)
+    public Integer createClue(@RequestBody ClueInfo clueInfo){
+        return null;
+    }
+
+    @PostMapping(value = "/update/niche",consumes = MediaType.APPLICATION_JSON)
+    public Integer updateNiche(@RequestBody NicheInfo nicheInfo){
+        return null;
+    }
+
+    @PostMapping(value = "/create/nihce",consumes = MediaType.APPLICATION_JSON)
+    public Integer createNiche(@RequestBody NicheInfo nicheInfo){
+        return null;
+    }
+
+    @PostMapping(value = "/agent/frozen",consumes = MediaType.APPLICATION_JSON)
+    public Integer frozenAgent(@RequestBody AgentInfo agentInfo){
+        return null;
+    }
+
+
+    @PostMapping(value = "/agent/open/sea",consumes = MediaType.APPLICATION_JSON)
+    public Integer agentOpenSea(@RequestBody AgentOpenSea agentOpenSea){
+        return null;
+    }
+
+    @PostMapping(value = "/agent/product/config",consumes = MediaType.APPLICATION_JSON)
+    public Integer agentProductConfig(@RequestBody AgentProduct agentProduct){
+        return null;
+    }
+
+    @PostMapping(value = "/clue/channel/open/sea",consumes = MediaType.APPLICATION_JSON)
+    public Integer clueChannelOpenSea(@RequestBody AgentProduct agentProduct){
+        return null;
+    }
+
+    @PostMapping(value = "/clue/agent/open/sea",consumes = MediaType.APPLICATION_JSON)
+    public Integer clueAgentOpenSea(@RequestBody AgentProduct agentProduct){
+        return null;
+    }
+
 }
