@@ -43,6 +43,7 @@
         <module>book-spring-boot-actual-combat-web-socket</module>
         <module>book-spring-boot-actual-combat-test</module>
         <module>book-spring-boot-actual-combat-actuator</module>
+        <module>spring-cloud-eureka-config</module>
     </modules>
 
     <properties>
@@ -76,6 +77,19 @@
         <jasypt.version>2.1.1</jasypt.version>
         <joda.time.version>2.10.2</joda.time.version>
         <contiperf.version>2.3.4</contiperf.version>
+        <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
