@@ -44,6 +44,8 @@
         <module>book-spring-boot-actual-combat-test</module>
         <module>book-spring-boot-actual-combat-actuator</module>
         <module>spring-cloud-eureka-config</module>
+        <module>spring-cloud-eureka-server01</module>
+        <module>spring-cloud-eureka-server02</module>
     </modules>
 
     <properties>
