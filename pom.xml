@@ -46,6 +46,8 @@
         <module>spring-cloud-eureka-config</module>
         <module>spring-cloud-eureka-server01</module>
         <module>spring-cloud-eureka-server02</module>
+        <module>spring-cloud-eureka-provider</module>
+        <module>spring-cloud-eureka-consumer</module>
     </modules>
 
     <properties>
