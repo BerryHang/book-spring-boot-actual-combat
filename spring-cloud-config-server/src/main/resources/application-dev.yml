@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/BerryHang/book-spring-boot-actual-combat
+          search-paths: spring-cloud-spring-cloud-config-server/src/main/resource
+          username: berryhang  #账号密码写真实的快一些我觉得，不使用也能访问有点慢
+          password: wei520man!!
