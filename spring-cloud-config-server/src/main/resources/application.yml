@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/spring_boot_actual_combat?useUnicode=true&characterEncoding=UTF-8&useSSL=true
     username: root
-    password: root1234
+    password: root123
   application:
     name: config-server
   cloud:
