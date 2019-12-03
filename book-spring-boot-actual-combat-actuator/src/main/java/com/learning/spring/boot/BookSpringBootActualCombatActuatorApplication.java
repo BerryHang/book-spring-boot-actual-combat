@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookSpringBootActualActuatorShiroApplication {
+public class BookSpringBootActualCombatActuatorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BookSpringBootActualActuatorShiroApplication.class, args);
+        SpringApplication.run(BookSpringBootActualCombatActuatorApplication.class, args);
     }
 }
